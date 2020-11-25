@@ -1,13 +1,10 @@
 import React from 'react'
-import FormularioLogin from '../components/FormularioLogin'
-import Registro from '../components/Registro'
+import FormLogin from '../components/FormLogin'
 
 const Login = () => {
     return (
         <div>
-            <h1>login</h1>
-
-            <Registro />
+            <FormLogin />
         </div>
     )
 }
