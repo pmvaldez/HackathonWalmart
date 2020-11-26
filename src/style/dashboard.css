@@ -11,10 +11,12 @@ body {
   /*
    * Sidebar
    */
-  
+   .nav-link {
+    padding: 1rem 1rem !important;
+}
   .sidebar {
     position: fixed;
-    top: 0;
+    top: 30px;
     bottom: 0;
     left: 0;
     z-index: 100; /* Behind the navbar */
@@ -46,7 +48,7 @@ body {
   
   .sidebar .nav-link {
     font-weight: 500;
-    color: #333;
+    color: #FFFFFF;
   }
   
   .sidebar .nav-link .feather {
@@ -109,9 +111,10 @@ body {
     -ms-user-select: none;
     user-select: none;
   }
-
+  
   @media (min-width: 768px) {
     .bd-placeholder-img-lg {
       font-size: 3.5rem;
     }
   }
+  
