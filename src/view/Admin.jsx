@@ -7,11 +7,8 @@ const Admin = () => {
     return (
         <>
         <Navbar />
-        <div className="container-fluid">
-            <div className="row">
             <NavbarLeft />
-            </div>
-        </div>
+
         </>
     )
 }
