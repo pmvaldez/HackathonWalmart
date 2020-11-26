@@ -5,7 +5,7 @@ const writeStream = fs.createWriteStream('quotes.json');
 
 var writeJson = require('write-json');
 
-async function init() {
+/* async function init2() {
 
     // async
     const data = [];
@@ -13,23 +13,24 @@ async function init() {
     try {
         // const response = await request('http://quotes.toscrape.com/');
         const $ = await request({
-            uri: 'http://quotes.toscrape.com/',
+            uri: 'https://www.gob.cl/coronavirus/pasoapaso#documentos/',
             transform: body => cheerio.load(body)
         });
 
         writeStream.write('Quote|Author|Tags\n');
         const tags = [];
-        $('.quote').each((i, el) => {
-            const text = $(el).find('span.text').text().replace(/(^\“|\”$)/g, "");
-            const author = $(el).find('span small.author').text();
+        $('.card').each((i, el) => {
+            const text = $(el).find('h5 .card-title').text() .replace(/(^\“|\”$)/g, "");
+            const author = $(el).find('a').text();
+            const doc = $(el).find('a').html();
             const tag = $(el).find('.tags a').html();
             tags.push(tag);
 
             const feed = {
-                created_at: text,
-                entry_id: 33358,
-                field1: author,
-                field2: tag,
+                text: text,
+                pdf: doc,
+                autor: author,
+               field2: tag, 
             };
 
             data.push(feed);
@@ -47,6 +48,50 @@ async function init() {
     } catch (e) {
         console.log(e);
     }
-}
+} */
 
+async function init() {
+
+    // async
+    const data = [];
+
+    try {
+        // const response = await request('http://quotes.toscrape.com/');
+        const $ = await request({
+            uri: 'https://www.bcn.cl/publicaciones/ediciones-bcn',
+            transform: body => cheerio.load(body)
+        });
+
+        writeStream.write('Quote|Author|Tags\n');
+        //const tags = [];
+        $('.informes').each((i, el) => {
+            const text = $(el).find('h3').text().replace(/(^\“|\”$)/g, "");
+            const author = $(el).find('p').text();
+            //const doc = $(el).find('a').html();
+            //const tag = $(el).find('.tags a').html();
+            //tags.push(tag);
+            console.log('text', text)
+            console.log('auth', author)
+            const feed = {
+                text: text,
+                //pdf: doc,
+                autor: author,
+               /*  field2: tag, */
+            };
+
+            data.push(feed);
+            console.log("dattaa", data)
+        })
+
+        writeJson('foo.json', {
+            data
+        }, function (err) {
+            console.log("erro")
+        });
+        console.log(data)
+
+    } catch (e) {
+        console.log(e);
+    }
+}
 init();
