@@ -1,13 +1,11 @@
 const request = require('request-promise');
 const cheerio = require('cheerio');
-
 const fs = require('fs-extra');
 const writeStream = fs.createWriteStream('quotes.json');
 
 var writeJson = require('write-json');
 
 async function init() {
-
 
     // async
     const data = [];
@@ -32,7 +30,6 @@ async function init() {
                 entry_id: 33358,
                 field1: author,
                 field2: tag,
-
             };
 
             data.push(feed);
