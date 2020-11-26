@@ -6,8 +6,10 @@ const NavbarLeft = () => {
 
 
     return (
+      <div className="container-fluid">
+      <div className="row">
         <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-        <div class="sidebar-sticky pt-3" style={{background:"#0076CD"}}>
+        <div class="sidebar-sticky pt-3" style={{background:"#0076CD", marginTop:'33px', borderTopRightRadius:"21px"}}>
           <ul class="nav flex-column">
           <li class="nav-item">
             <a class="nav-link active" href="/">
@@ -84,6 +86,8 @@ const NavbarLeft = () => {
   
         </div>
       </nav>
+      </div>
+        </div>
     )
 }
 
