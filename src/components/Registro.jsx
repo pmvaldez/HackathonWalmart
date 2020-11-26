@@ -1,42 +1,13 @@
 import React from 'react'
 import { db, auth } from '../db/firebase'
 
-
-const Registro = (props) => {
+const Registro = () => {
 
     const [email, setEmail] = React.useState('')
     const [pass, setPass] = React.useState('')
     const [error, setError] = React.useState(null)
 
-    const registrar = React.useCallback(async () => {
-        try {
-            const res = await auth.createUserWithEmailAndPassword(email, pass)
-            console.log(res.user)
-            await db.collection('usuarios').doc(res.user.uid).set({
-                fechaCreacion: Date.now(),
-                displayName: res.user.displayName,
-                photoURL: res.user.photoURL,
-                email: res.user.email,
-                uid: res.user.uid
-            })
-            setEmail('')
-            setPass('')
-            setError(null)
-            props.history.push('/Admin')
-        } catch (error) {
-            console.log(error)
-            // setError(error.message)
-            if (error.code === 'auth/email-already-in-use') {
-                setError('Usuario ya registrado...')
-                return
-            }
-            if (error.code === 'auth/invalid-email') {
-                setError('Email no válido')
-                return
-            }
-        }
-    }, [email, pass, props.history])
-
+    //validación de campos vacios y password de 6 caracteres
     const procesarDatos = e => {
         e.preventDefault()
         if (!email.trim() || !pass.trim()) {
@@ -56,8 +27,39 @@ const Registro = (props) => {
         }
         console.log('correcto...')
         setError(null)
-
     }
+
+    //funcion para registrar usuarios por correo y guardar datos en firebase
+    const registrar = React.useCallback(async () => {
+        try {
+            const res = await auth.createUserWithEmailAndPassword(email, pass)
+            console.log(res.user)
+            await db.collection('usuarios').doc(res.user.uid).set({
+                fechaCreacion: Date.now(),
+                displayName: res.user.displayName,
+                photoURL: res.user.photoURL,
+                email: res.user.email,
+                uid: res.user.uid
+            })
+            setEmail('')
+            setPass('')
+            setError(null)
+            alert('usuario registrado con éxito')
+            //props.history.push('/Admin')
+        } catch (error) {
+            console.log(error)
+            setError(error.message)
+            if (error.code === 'auth/email-already-in-use') {
+                setError('Usuario ya registrado...')
+                return
+            }
+            if (error.code === 'auth/invalid-email') {
+                setError('Email no válido')
+                return
+            }
+        }
+    }, [email, pass])
+
     return (
         <div>
             <h3 className="text-center">
@@ -95,21 +97,10 @@ const Registro = (props) => {
                         >
                             Registro
                         </button>
-                        <button
-                            className="btn btn-sm btn-info btn-block"
-                            type="button"
-
-                        >
-                            Ya tienes cuenta?
-                        </button>
                     </form>
                 </div>
             </div>
-
-
-
         </div>
     )
 }
-
 export default Registro
