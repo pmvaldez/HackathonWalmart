@@ -2,10 +2,16 @@ const request = require('request-promise');
 const cheerio = require('cheerio');
 
 const fs = require('fs-extra');
-const writeStream = fs.createWriteStream('quotes.csv');
-const writeJson = fs.createWriteStream('quotes.json');
+const writeStream = fs.createWriteStream('quotes.json');
+
+var writeJson = require('write-json');
 
 async function init() {
+
+
+    // async
+    const data = [];
+
     try {
         // const response = await request('http://quotes.toscrape.com/');
         const $ = await request({
@@ -20,22 +26,26 @@ async function init() {
             const author = $(el).find('span small.author').text();
             const tag = $(el).find('.tags a').html();
             tags.push(tag);
-            // console.log(text, author, tags.join(','))
-            writeStream.write(`${text}|${author}|${tags}\n`);
-            // console.log(i, text, author)
+
+            const feed = {
+                created_at: text,
+                entry_id: 33358,
+                field1: author,
+                field2: tag,
+
+            };
+
+            data.push(feed);
+            console.log("kipa")
+            console.log("dattaa", data)
         })
-        const csvFilePath='quotes.csv'
-        const csv=require('csvtojson')
-        csv()
-        .fromFile(csvFilePath)
-        .then((jsonObj)=>{
-            console.log(jsonObj);
-            writeJson.write(jsonObj)
-        })
-         
-        // Async / await usage
-        const jsonArray=await csv().fromFile(csvFilePath);
-        console.log(jsonArray);
+
+        writeJson('foo.json', {
+            data
+        }, function (err) {
+            console.log("erro")
+        });
+        console.log(data)
 
     } catch (e) {
         console.log(e);

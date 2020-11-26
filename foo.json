@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "created_at": "The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.",
+      "entry_id": 33358,
+      "field1": "Albert Einstein",
+      "field2": "change"
+    },
+    {
+      "created_at": "It is our choices, Harry, that show what we truly are, far more than our abilities.",
+      "entry_id": 33358,
+      "field1": "J.K. Rowling",
+      "field2": "abilities"
+    },
+    {
+      "created_at": "There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.",
+      "entry_id": 33358,
+      "field1": "Albert Einstein",
+      "field2": "inspirational"
+    },
+    {
+      "created_at": "The person, be it gentleman or lady, who has not pleasure in a good novel, must be intolerably stupid.",
+      "entry_id": 33358,
+      "field1": "Jane Austen",
+      "field2": "aliteracy"
+    },
+    {
+      "created_at": "Imperfection is beauty, madness is genius and it's better to be absolutely ridiculous than absolutely boring.",
+      "entry_id": 33358,
+      "field1": "Marilyn Monroe",
+      "field2": "be-yourself"
+    },
+    {
+      "created_at": "Try not to become a man of success. Rather become a man of value.",
+      "entry_id": 33358,
+      "field1": "Albert Einstein",
+      "field2": "adulthood"
+    },
+    {
+      "created_at": "It is better to be hated for what you are than to be loved for what you are not.",
+      "entry_id": 33358,
+      "field1": "André Gide",
+      "field2": "life"
+    },
+    {
+      "created_at": "I have not failed. I've just found 10,000 ways that won't work.",
+      "entry_id": 33358,
+      "field1": "Thomas A. Edison",
+      "field2": "edison"
+    },
+    {
+      "created_at": "A woman is like a tea bag; you never know how strong it is until it's in hot water.",
+      "entry_id": 33358,
+      "field1": "Eleanor Roosevelt",
+      "field2": "misattributed-eleanor-roosevelt"
+    },
+    {
+      "created_at": "A day without sunshine is like, you know, night.",
+      "entry_id": 33358,
+      "field1": "Steve Martin",
+      "field2": "humor"
+    }
+  ]
+}
