@@ -18,17 +18,16 @@ async function init() {
         $('.post').each((i, el) => {
             const fecha = $(el).find('span.meta').text();
             const titulo = $(el).find('h4.title').text();
-          
-            //const link = `https://dipol.minsal.cl/${titulo}`
-            const link = titulo.link(`https://dipol.minsal.cl/${titulo}`);
-            //const tag = $(el).find('.tags a').html();
+            const link = $(el).find('a').attr('href');
+            const img =  $(el).find('img.attachment-320x210').attr('src');
             //tags.push(tag);
-           
+   
             //estructura de la data
             const feed = {
                 date: fecha,
                 title: titulo,
                 link: link,
+                img: img,
             };
             //guarda los datos en el array de la data
             data.push(feed);
