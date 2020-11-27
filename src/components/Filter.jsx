@@ -2,18 +2,57 @@ import React from 'react'
 import '../style/filter.css'
 import minsal from '../db/minsal.json'
 
-import Swal from 'sweetalert2'
-
-import FiltroSelect from './FiltroSelect';
-
 const Filter = () => {
-    const data = minsal.data;
-    console.log(data)
 
+    const data = minsal.data;
+   /* const [region, setRegion] = React.useState('')
+    const [, setData] = React.useState()
+    console.log('data',data)
+    let house = data.filter((dato) => dato.author === region)
+    setData(house)
+       const filtroRegion = () =>{
+      
+        let house = data.filter((dato) => dato.author === region);
+        setData(house)
+        console.log('house',data)
+      }; 
+      filtroRegion() */
 
     return (
         <div className="containerRepo">
-            <FiltroSelect/>
+            <div className="contselects">
+            <div className="selects"> 
+                <select name="regiones" id="region" /* onClick={e => setRegion(e.target.value)} */>
+                    <option value="todas">Todas</option>
+                    <option value="Seremi RM" >Metropolitana</option>
+                    <option value="biobio">BioBio</option>
+                    <option value="loslagos">Los Lagos</option>
+                    <option value="magallanes">Magallanes</option>
+                </select>
+
+                <select name="regiones" id="region">
+                    <option value="todas">Todas</option>
+                    <option value="metropolitana">Metropolitana</option>
+                    <option value="biobio">BioBio</option>
+                    <option value="loslagos">Los Lagos</option>
+                    <option value="magallanes">Magallanes</option>
+                </select>
+
+                <select name="regiones" id="region">
+                    <option value="todas">Todas</option>
+                    <option value="metropolitana">Metropolitana</option>
+                    <option value="biobio">BioBio</option>
+                    <option value="loslagos">Los Lagos</option>
+                    <option value="magallanes">Magallanes</option>
+                </select>
+
+                <select name="regiones" id="region">
+                    <option value="todas">Fecha</option>
+                    <option value="metropolitana">Metropolitana</option>
+                    <option value="biobio">BioBio</option>
+                </select>
+            </div>
+        </div>
             {
               data.map((item, i) => (
                 <div className="card"  key={i}>

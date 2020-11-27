@@ -9,7 +9,7 @@ async function init() {
     const data = [];
     try {
         const $ = await request({
-            uri: 'https://seremi13.redsalud.gob.cl/',
+            uri: 'https://seremi12.redsalud.gob.cl/',
             transform: body => cheerio.load(body)
         });
 
@@ -25,17 +25,17 @@ async function init() {
             //estructura de la data
             const feed = {
                 date: fecha,
-                author: 'Seremi RM',
+                author: 'Seremi Región de Magallanes',
                 title: titulo,
                 link: link,
                 img: img,
             };
             //guarda los datos en el array de la data
             data.push(feed);
-            console.log("dataRM", data)
+            console.log("dataMagallanes", data)
         })
         //convierte el array de la data aun json
-        writeJson('rm.json', {
+        writeJson('maga.json', {
             data
         }, function (err) {
             console.log("erro")
