@@ -35,21 +35,21 @@ const Filter = () => {
                     <option value="magallanes"></option>
                 </select>
 
-                <select name="regiones" id="region">
+    {/*             <select name="regiones" id="region">
                     <option value="todas">Fecha</option>
                     <option value="metropolitana"></option>
                     <option value="biobio"></option>
-                </select>
+                </select> */}
             </div>
         </div>
             {
               data.map((item, i) => (
                 <div className="card"  key={i}>
                     <img src={item.img} class="card-img-top" alt="..."/>
-                    <div className="card-body">
-                        <p className="card-title">{item.title}</p>
-                        <p className="card-text">Fecha: {item.date}</p>
-                        <p className="card-text">Autor: {item.author}</p>
+                    <div className="cardbody">
+                        <p className="cardtitle">{item.title}</p>
+                        <p className="cardtext">Fecha: {item.date}</p>
+                        <p className="cardtext">Autor: {item.author}</p>
                         <button><a href={item.link} target='blank'>ver</a></button> 
                     </div>
                 </div>
