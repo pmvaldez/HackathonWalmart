@@ -4,11 +4,14 @@ import Navbar from '../components/Navbar'
 import NavbarLeft from '../components/NavbarLeft'
 
 const Admin = () => {
+
     return (
         <>
-            <Navbar />
+        <Navbar />
+        <div style={{display:'flex', flexDirection:'row'}}>
             <NavbarLeft />
             <CardOne />
+            </div>
         </>
     )
 }
