@@ -80,7 +80,7 @@ const FormLogin = () => {
                                 onChange={e => setEmail(e.target.value)}
                                 value={email}
                             />
-                            <label for="inputEmail">Email address</label>
+                            <label for="inputEmail">Tucorreo@walmart.com</label>
                         </div>
                         <div className="form-label-group">
                             <input
@@ -91,7 +91,7 @@ const FormLogin = () => {
                                 onChange={e => setPass(e.target.value)}
                                 value={pass}
                             />
-                            <label for="inputPassword">Password</label>
+                            <label for="inputPassword">******************</label>
                         </div>
                         <div className="checkbox mb-3">
                             <a href='/'> ¿Olvidaste tu contraseña?
@@ -99,7 +99,7 @@ const FormLogin = () => {
                         </div>
                         <button
                             className="btn btn-lg btnsing btn-block"
-                            onClick={() => login()}>Iniciar
+                            onClick={() => login()}>Entrar
                         </button>
                     </form>
                 </div>
