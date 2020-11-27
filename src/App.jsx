@@ -5,6 +5,8 @@ import Admin from './view/Admin'
 import Login from './view/Login'
 import Repository from './view/Repository'
 import CrearFormulario from './view/CrearFormulario'
+import Alert from './view/Alert'
+
 /* import Toggle from './components/Toggle';
 import {useDarkMode} from './useDarkMode';
 import { GlobalStyles } from './global'
@@ -32,6 +34,9 @@ const App = () => {
         </Route>
         <Route path="/repositorio"
           component={Repository}>
+        </Route>
+        <Route path="/Alert"
+          component={Alert}>
         </Route>
         <Route path="/formulario"
           component={CrearFormulario}>
