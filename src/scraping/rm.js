@@ -5,17 +5,16 @@ const writeJson = require('write-json');
 //funcion para realizar el scraping a página dle minsal
 async function init() {
 
-    // array para guardar datos extraidos noticias del minsal
+    // array para guardar datos extraidos noticias del seremi metropolitana
     const data = [];
     try {
-        // const response = await request('http://quotes.toscrape.com/'); otra opcion de hacer el llamado
         const $ = await request({
-            uri: 'https://dipol.minsal.cl/category/noticias/',
+            uri: 'https://seremi13.redsalud.gob.cl/',
             transform: body => cheerio.load(body)
         });
 
         //const tags = [];
-        $('.post').each((i, el) => {
+        $('.new').each((i, el) => {
             const fecha = $(el).find('span.meta').text();
             const titulo = $(el).find('h4.title').text();
             const link = $(el).find('a').attr('href');
