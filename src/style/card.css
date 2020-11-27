@@ -1,0 +1,27 @@
+.containerCard {
+    width: 84%;
+    margin-top: 100px;
+    float: right;
+    padding: 21px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  
+}
+
+.containerBar {
+    width: 100%;
+    margin-top: 47px;
+    padding: 1px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.cardB {
+    margin: 31px;
+    margin-left: 10px;
+    background-color: #fff;
+    width: 21rem;
+}
+.ant-progress-success-bg, .ant-progress-bg {
+    background-color: #AA86E5 !important
+}
