@@ -1,12 +1,16 @@
 import React from 'react'
 import '../style/filter.css'
 import minsal from '../db/minsal.json'
+
+import Swal from 'sweetalert2'
+
 import FiltroSelect from './FiltroSelect';
 
 const Filter = () => {
-     const  data = minsal.data;
-    console.log(data) 
-    
+    const data = minsal.data;
+    console.log(data)
+
+
     return (
         <div className="containerRepo">
             <FiltroSelect/>
@@ -20,9 +24,9 @@ const Filter = () => {
                         <p className="card-text">Autor: {item.author}</p>
                         <button><a href={item.link} target='blank'>ver</a></button> 
                     </div>
+
                 </div>
-              ))
-            }
+            ))}
         </div>
     )
 }
