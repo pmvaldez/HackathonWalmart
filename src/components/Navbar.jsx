@@ -13,7 +13,7 @@ const Navbar = (props) => {
       }
     return (
         <nav class="navbar navbar-dark sticky-top flex-md-nowrap p-0 shadow" style={{background:'#0076CD', position:'fixed'}}>
-            <img src={logo} alt="" class="navbar col-md-3 col-lg-2 mr-0 px-5" href="#"/>
+            <img src={logo} alt="" class="navbar col-md-3 col-lg-2 mr-0 px-5" href="/Admin"/>
 {/*             <div className="input">
             <input class="form-control dropdown-toggle" type="text" placeholder="Search" aria-label="Search"></input>
             </div> */}
@@ -23,7 +23,7 @@ const Navbar = (props) => {
             <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"></input>
             <ul class="navbar-nav px-3">
                 <li class="nav-item text-nowrap">
-                    <a class="nav-link" onClick={logOut}>Cerrar Sesion</a>
+                    <a className="nav-link" href='/' onClick={logOut}>Cerrar Sesion</a>
                 </li>
             </ul>
         </nav>
