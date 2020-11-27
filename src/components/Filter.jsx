@@ -1,10 +1,13 @@
 import React from 'react'
 import '../style/filter.css'
 import minsal from '../db/minsal.json'
+import Swal from 'sweetalert2'
+
 
 const Filter = () => {
     const data = minsal.data;
     console.log(data)
+
 
     return (
         <div className="containerRepo">
