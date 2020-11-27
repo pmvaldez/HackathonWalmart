@@ -1,13 +1,58 @@
 .containerRepo{
     width: 84%;
+    margin-top: 100px;
     float: right;
     padding: 21px;
-    background-color: rebeccapurple;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 50px;
+    justify-content: center;   
 }
 
+.contselects{
+    width: 100%;
+}
+.selects{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+.selects select{
+    margin: 20px;
+    padding: 9px;
+    height: 51px;
+    width: 210px;
+    left: 498px;
+    top: 175px;
+    border-radius: 5px;
+}
 .card{
-    margin: 20px
+    margin: 8px;
+    background-color: #95CBF3;
+    width: 16rem;
+}
+.card-body{
+    line-height: 20px;
+}
+.card-title{
+    font-weight: bold;
+    font-size: 20px
+}
+
+.card-text{
+    font-family: 'Calibri';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.card button{
+    width: 86px;
+    height: 24px;
+    background: #0043D4;
+    border-radius: 39px;
+    border: none;
+}
+.card button a{
+    color: #FBFDFE; 
 }
