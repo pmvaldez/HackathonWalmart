@@ -9,11 +9,11 @@ const Admin = () => {
     return (
         <>
         <Navbar />
-        <div style={{display:'flex', flexDirection:'row'}}>
+{/*         <div style={{display:'flex', flexDirection:'row'}}> */}
             <NavbarLeft />
             <CardOne />
 {/*             <CardTwo /> */}
-            </div>
+
         </>
     )
 }
