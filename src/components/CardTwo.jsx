@@ -1,11 +1,10 @@
 import React from 'react'
 
-const CardOne = () => {
+const CardTwo = () => {
     return (
-        <div style={{marginTop:'7rem'}}>
-            <h1 class="h2">Bienvenida Daniela</h1>
-            <p class="h2">¿Qué necesitas hacer hoy?</p>
-            <div class="card-deck" style={{width:'90%' }}>
+        <div>
+            <h1 class="h2">Ultimas Novedades</h1>
+            <div class="card-deck">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Crear Alerta Prioritaria</h5>
@@ -24,8 +23,7 @@ const CardOne = () => {
                     <div class="card-body">
                     <h5 class="card-title">Gestionar Usuarios</h5>
                     <p class="card-text">Invita a nuevos usuarios, revisa tu historial con ellos y el estado de las alertas que comparten.</p>
-                    <div class="card-footer" style={{backgroundColor:'red'}}>
-                    </div>
+                    <button className="btn btn-lg btnsing btn-block"></button>
                     </div>
                 </div>
             </div>
@@ -33,4 +31,4 @@ const CardOne = () => {
     )
 }
 
-export default CardOne
+export default CardTwo
