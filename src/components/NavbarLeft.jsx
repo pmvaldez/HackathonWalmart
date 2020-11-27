@@ -8,7 +8,7 @@ const NavbarLeft = () => {
         <div class="sidebar-sticky pt-3" style={{background:"#0076CD", marginTop:'33px', borderTopRightRadius:"21px"}}>
           <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" href="/">
+            <a class="nav-link" href="/admin">
             <span data-feather="home">
             <svg width="2em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door-fill" color="black" xmlns="http://www.w3.org/2000/svg">
                <path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/>
@@ -36,7 +36,7 @@ const NavbarLeft = () => {
                     <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
                     <path fill-rule="evenodd" d="M6 1h6v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8V1z"/>
                   </svg></span>
-               <Link to="/repositorio">Repositorio Normativas</Link> 
+               <Link to="/repositorio" style={{color:'white'}}>Repositorio Normativas</Link> 
               </a>
             </li>
             <li class="nav-item">
