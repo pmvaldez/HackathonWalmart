@@ -4,9 +4,9 @@ import '../style/card.css'
 import graf from '../img/covid.PNG'
 const CardOne = () => {
     return (
-        <div /* style={{marginTop:'7rem'}} */ className="containerCard">
-            <h1 class="h2">Bienvenida Daniela</h1>
-            <p class="h2">¿Qué necesitas hacer hoy?</p>
+        <div className="containerCard">
+            <h1>Bienvenida Daniela</h1>
+            <p >¿Qué necesitas hacer hoy?</p>
             <div class="card-deck" style={{width:'90%' }}>
                 <div class="card">
                     <div class="card-body">
