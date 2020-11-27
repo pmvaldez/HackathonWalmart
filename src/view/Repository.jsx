@@ -1,9 +1,15 @@
 import React from 'react'
 import Filter from '../components/Filter'
+import Navbar from '../components/Navbar'
+import NavbarLeft from '../components/NavbarLeft'
 
 const Repository = () => {
     return (
-        <Filter/>
+        <>
+            <Navbar />
+            <NavbarLeft />
+            <Filter/>
+        </> 
     )
 }
 

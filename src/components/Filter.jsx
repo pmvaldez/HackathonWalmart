@@ -8,17 +8,17 @@ const Filter = () => {
     
     return (
         <div className="containerRepo">
-        <h1>filter</h1>
-        {data.map((item, i) => (
-                <div key={i}>
-                    <ul>
-                        <img src={item.img} alt=""/>
-                        <li> {item.date}</li>
-                        <li> {item.title}</li>
+            {
+              data.map((item, i) => (
+                <div className="card" style={{width: '15rem'}} key={i}>
+                    <img src={item.img} class="card-img-top" alt="..."/>
+                    <div className="card-body">
+                        <p className="card-text">{item.title}</p>
                         <a href={item.link}>link</a>
-                    </ul>
-                   </div>
-              ))}
+                    </div>
+                </div>
+              ))
+            }
         </div>
     )
 }
