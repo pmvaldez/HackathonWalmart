@@ -9,15 +9,14 @@ async function init() {
     const data = [];
     try {
         const $ = await request({
-            uri: 'https://seremi13.redsalud.gob.cl/',
+            uri: 'https://www.seremidesaludbiobio.cl/sd/web/',
             transform: body => cheerio.load(body)
         });
 
         //const tags = [];
-        $('.home ul.news li').each((i, el) => {
-            const fecha = $(el).find('time').text().replace(/(^\“|\”$)/g, "");
-            //const titulo = $(el).find('a.image').text();
-            const titulo =  $(el).find('li article h2 a').text();
+        $('section.tab-noticias section.area-trabajo section.cont-noticias .slider .slidesContainer').each((i, el) => {
+            const fecha = $(el).find('span.fecha').text();
+            const titulo =  $(el).find('p.cont-1').text();
             const link = $(el).find('a').attr('href');
             const img =  $(el).find('img').attr('src');
             //tags.push(tag);
@@ -25,17 +24,17 @@ async function init() {
             //estructura de la data
             const feed = {
                 date: fecha,
-                author: 'Seremi RM',
+                author: 'Seremi Región del Bío-Bío',
                 title: titulo,
                 link: link,
                 img: img,
             };
             //guarda los datos en el array de la data
             data.push(feed);
-            console.log("dataRM", data)
+            console.log("dataBioBio", data)
         })
         //convierte el array de la data aun json
-        writeJson('rm.json', {
+        writeJson('bio.json', {
             data
         }, function (err) {
             console.log("erro")
