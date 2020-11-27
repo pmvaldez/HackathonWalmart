@@ -1,10 +1,11 @@
 import React from 'react'
 import { db, auth } from '../db/firebase'
-
+import Swal from 'sweetalert2'
 const Registro = () => {
 
     const [email, setEmail] = React.useState('')
     const [pass, setPass] = React.useState('')
+    const [rol, setRol] = React.useState('')
     const [error, setError] = React.useState(null)
 
     //validación de campos vacios y password de 6 caracteres
@@ -39,12 +40,22 @@ const Registro = () => {
                 displayName: res.user.displayName,
                 photoURL: res.user.photoURL,
                 email: res.user.email,
-                uid: res.user.uid
+                uid: res.user.uid,
+                ocupacion: rol,
             })
+
             setEmail('')
             setPass('')
+            setRol('')
             setError(null)
-            alert('usuario registrado con éxito')
+            Swal.fire({
+                position: 'top-center',
+                icon: 'success',
+                title: '¡Usuario registrado con éxito !',
+                showConfirmButton: false,
+                timer: 1500
+            })
+      
             //props.history.push('/Admin')
         } catch (error) {
             console.log(error)
@@ -58,14 +69,13 @@ const Registro = () => {
                 return
             }
         }
-    }, [email, pass])
+    }, [email, pass,rol])
 
     return (
-        <div>
+        <div style={{marginTop: '50px'}}>
             <h3 className="text-center">
                 Registro
             </h3>
-            <hr />
             <div className="row justify-content-center">
                 <div className="col-12 col-sm-8 col-md-6 col-xl-4">
                     <form onSubmit={procesarDatos}>
@@ -90,8 +100,13 @@ const Registro = () => {
                             onChange={e => setPass(e.target.value)}
                             value={pass}
                         />
+                         <select className="form-control mb-2" name="function" onChange={e => setRol(e.currentTarget.value)}>
+                            <option value=''>Elige Ocupación</option>
+                            <option value="admin">Administrador</option>
+                         </select>
                         <button
-                            className="btn btn-lg btn-dark btn-block"
+                            className="btn btn-lg btn-block"
+                            style={{backgroundColor:'#FFBC00'}}
                             type="submit"
                             onClick={registrar}
                         >

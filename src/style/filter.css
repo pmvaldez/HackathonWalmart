@@ -31,15 +31,16 @@
     background-color: #95CBF3;
     width: 16rem;
 }
-.card-body{
+.cardbody{
     line-height: 20px;
+    padding: 13px;
 }
-.card-title{
+.cardtitle{
     font-weight: bold;
     font-size: 20px
 }
 
-.card-text{
+.cardtext{
     font-family: 'Calibri';
     font-style: normal;
     font-weight: normal;

@@ -25,3 +25,35 @@
 .ant-progress-success-bg, .ant-progress-bg {
     background-color: #AA86E5 !important
 }
+
+.btnicon{
+    width: 100%;
+    height: 50px;
+    background: #4773E1;
+}
+
+.card-body{
+    padding: 0px!important;
+}
+.card-title {
+    padding: 12px !important;
+    font-size: 25px;
+}
+.card-text {
+    padding: 20px !important;
+    font-family: Calibri;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 16px;
+}
+
+.card-footer{
+    height: 50px;
+    position: absolute;
+    width: 100%;
+}
+
+.card-deck .card {
+    margin-bottom: 72px;
+}
