@@ -2,18 +2,19 @@
     display: flex;
     align-items: center;
     height: 100vh;
+    /* background-color: #162A56; */
 }
 .form-signin {
     width: 100%;
-    max-width: 420px;
-    padding: 40px;
+    max-width: 500px;
+    padding: 50px;
     margin: auto;
     background-color: #0076CD;
   }
   
   .btnsing{
       background-color: #FFBC00;
-      color: white;
+      color:#06122D;
   }
   .form-label-group {
     position: relative;
