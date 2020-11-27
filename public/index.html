@@ -36,7 +36,25 @@
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
+  <style>
+    .oscuro{ 
+      background-color: #092D53; 
+      color: #fff; 
+  }
+  </style>
+<!--   <button type="button" class="btn btn-dark" onclick="cambiarModo()" > -->
+  <img src="./Initial.png" alt="" onclick="cambiarModo()">
+    <script type="text/javascript"> 
+      function cambiarModo() { 
+        var cuerpoweb = document.body; 
+        cuerpoweb.classList.toggle("oscuro"); 
+      } 
+    </script>
+  <div id="root">
+
+  </div>
+
+
   <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
