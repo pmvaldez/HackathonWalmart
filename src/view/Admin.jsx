@@ -5,13 +5,14 @@ import Navbar from '../components/Navbar'
 import NavbarLeft from '../components/NavbarLeft'
 
 const Admin = () => {
+
     return (
         <>
         <Navbar />
+        <div style={{display:'flex', flexDirection:'row'}}>
             <NavbarLeft />
-{/*             <Filter/> */}
             <CardOne />
-
+            </div>
         </>
     )
 }
