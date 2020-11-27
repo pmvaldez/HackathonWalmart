@@ -1,18 +1,16 @@
 import React from 'react'
-import CardOne from '../components/CardOne'
 import Navbar from '../components/Navbar'
 import NavbarLeft from '../components/NavbarLeft'
+import CardTwo from '../components/CardTwo'
 
-const Admin = () => {
-
+const Alert = () => {
     return (
-        <>
-        <Navbar />
+        <div>
+            <Navbar />
             <NavbarLeft />
-            <CardOne />
-
-        </>
+            < CardTwo />
+        </div>
     )
 }
 
-export default Admin
+export default Alert
