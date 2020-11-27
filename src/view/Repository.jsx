@@ -6,10 +6,10 @@ import NavbarLeft from '../components/NavbarLeft'
 const Repository = () => {
     return (
         <>
-            <Navbar />
-            <NavbarLeft />
-            <Filter/>
-        </> 
+        <Navbar />
+        <NavbarLeft />
+        <Filter/>
+    </> 
     )
 }
 
