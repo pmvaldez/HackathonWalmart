@@ -3,6 +3,7 @@ import React from 'react'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Admin from './view/Admin'
 import Login from './view/Login'
+import Repository from './view/Repository'
 /* import Toggle from './components/Toggle';
 import {useDarkMode} from './useDarkMode';
 import { GlobalStyles } from './global'
@@ -27,6 +28,9 @@ const App = () => {
       </Route>
       <Route path="/Admin" 
         component={ Admin }>
+      </Route>
+      <Route path="/repositorio" 
+        component={ Repository }>
       </Route>
     </Router>
   </>

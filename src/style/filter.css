@@ -1,6 +1,13 @@
 .containerRepo{
-    height: 92vh;
     width: 84%;
     float: right;
     padding: 21px;
+    background-color: rebeccapurple;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.card{
+    margin: 20px
 }

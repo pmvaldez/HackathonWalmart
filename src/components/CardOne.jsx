@@ -2,7 +2,7 @@ import React from 'react'
 
 const CardOne = () => {
     return (
-<div class="card-deck">
+<div class="card-deck" style={{width:'70%' }}>
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">Card title</h5>
