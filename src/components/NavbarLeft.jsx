@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom'
 import '../style/dashboard.css'
 const NavbarLeft = () => {
     return (
-      <div className="container-fluid">
+      <div className="container-fluid" style={{width:'30%'}}>
       <div className="row">
         <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
         <div class="sidebar-sticky pt-3" style={{background:"#0076CD", marginTop:'33px', borderTopRightRadius:"21px"}}>
