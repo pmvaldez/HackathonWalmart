@@ -1,7 +1,7 @@
 import React from 'react'
 import "../style/formulario.css"
 import { db } from '../db/firebase'
-
+import Swal from 'sweetalert2'
 
 
 const Formulario = () => {
@@ -14,6 +14,7 @@ const Formulario = () => {
     const [region, setRegion] = React.useState("")
     const [concepto, setConcepto] = React.useState("")
     const [clasificacion, setClasificacion] = React.useState("")
+
 
     const agregar = async (e) => {
         e.preventDefault()
@@ -44,7 +45,15 @@ const Formulario = () => {
             })
             setTareas([
                 ...tareas,
-                { id: data.id, ...nuevaTarea }
+                { id: data.id, ...nuevaTarea },
+
+                Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: '¡Tu alerta fue enviada exitosamente !',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
             ])
             setTarea('')
         } catch (error) {
@@ -110,7 +119,7 @@ const Formulario = () => {
                         <label for="inputEmail4">Destinatarios</label>
                         <input type="text" class="form-control" id="inputNombre" placeholder="Nombre" />
                     </div>
-                    <button type="submit" class="btn btn-warning" onClick={agregar}>Generar nueva alerta</button>
+                    <button type="reset" class="btn btn-warning" onClick={agregar} reset>Generar nueva alerta</button>
                 </form>
             </div>
         </div>
