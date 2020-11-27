@@ -13,7 +13,7 @@ const Navbar = (props) => {
       }
     return (
         <nav class="navbar navbar-dark sticky-top flex-md-nowrap p-0 shadow" style={{background:'#0076CD', position:'fixed'}}>
-            <img src={logo} alt="" class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#"/>
+            <img src={logo} alt="" class="navbar col-md-3 col-lg-2 mr-0 px-5" href="#"/>
 {/*             <div className="input">
             <input class="form-control dropdown-toggle" type="text" placeholder="Search" aria-label="Search"></input>
             </div> */}
